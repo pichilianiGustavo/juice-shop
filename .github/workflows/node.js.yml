@@ -30,7 +30,7 @@ jobs:
     - name: Cache
       uses: actions/setup-node@v3
       with:
-        path: ./package-lock.json
+        cache-dependency-path: ./package-lock.json
     - name: Teste
       run: |
         npm ci
