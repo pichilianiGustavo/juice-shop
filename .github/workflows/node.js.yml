@@ -29,7 +29,6 @@ jobs:
 #     - run: npm install
     - name: Teste
       run: |
-        cd ..
         npm install npm@latest -g
         npm run build --if-present
         npm test
