@@ -31,7 +31,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         cache-dependency-path: ./package-lock.json
-    - name: Teste
+    - name: Install
       run: |
         npm install
-        npm test
