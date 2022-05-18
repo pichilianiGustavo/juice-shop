@@ -5,6 +5,11 @@ on: [push]
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      
     name: Scan the webapplication
     steps:
       - name: Checkout
@@ -15,6 +20,6 @@ jobs:
         uses: zaproxy/action-full-scan@v0.3.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          target: 'https://owasp.org/www-project-juice-shop'
-          rules_file_name: '.zap/rules.tsv'
+          target: 'https://www.zaproxy.org/'
+          #rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
